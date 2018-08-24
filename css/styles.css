@@ -1,0 +1,13 @@
+#output {
+  display:none;
+  cursor:pointer;
+  color: #0088cc;
+}
+
+.output:hover {
+   text-decoration:underline;
+}
+
+#order {
+  display: none;
+}

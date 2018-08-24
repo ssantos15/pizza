@@ -8,6 +8,7 @@ $(document).ready(function() {
   $("#options").submit(function(event) {
     debugger;
     event.preventDefault();
+    $("#output").show();
     var size = $("#sizes").val();
     var toppings = [];
     $("input:checkbox[name=chooseToppings]:checked").each(function(){
@@ -16,21 +17,26 @@ $(document).ready(function() {
     });
     //backendLogic
     var toppingsPrice = (toppings.length * 0.50);
-    var sizePrice = price;
-     console.log(sizePrice);
     if(size==="Small") {
-      var price = 8;
+      var totalPrice = 10 + toppingsPrice;
     } else if(size==="Medium") {
-      var price = 10;
+      var totalPrice = 12 + toppingsPrice;
     } else if(size==="Large") {
-      var price = 12
+      var totalPrice = 14 + toppingsPrice;
     } else if(size==="X-Large") {
-      var price= 14;
+      var totalPrice= 16 + toppingsPrice;
     }else {
       alert("Sorry --Select-- is not an option, please use the drop down arrow to see your options.")
     }
     var newPizza = new Pizza(size, toppings);
-    //frontendLogic
-    $(".output").append("<p>" + newPizza.size + ": " + newPizza. toppings + "</p>")
+  //frontendLogic
+    $("#output span").append(newPizza.size)
+    $("#output").last().click(function() {
+      $("#order").toggle();
+      $(".mainPage").toggle();
+      $(".output1").text(newPizza.size);
+      $(".oToppings").text(newPizza.toppings);
+      $(".price").text(totalPrice);
+    });
   });
 });
