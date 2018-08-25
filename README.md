@@ -21,11 +21,9 @@ _None._
 * steve.santos1508@gmail.com
 
 ## Specs
-|#|Spec Description|Input|Expected Output|
-|-------|-------|------|------|
-|1|The program allows user to pic size of pizza|X|
-|2|The program allows user to pick one or multiple toppings|X, X ...
-|3|The program calculates price of pizza according to size and topping and returns cost on a receipt $...||
+|1|The program allows user to pic size of pizza
+|2|The program allows user to pick one or multiple toppings
+|3|The program calculates price of pizza according to size and topping and returns cost on a receipt
 
 
 
